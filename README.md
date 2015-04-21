@@ -46,17 +46,14 @@ On the server:
   });
 ```
 
-### Server to Server Connection
+### Server to Server
 
-RemoveEventDDP allows to establish EventDDP between two servers. One server needs to be defined as the actual server while the other servers can connect to it via RemoveEventDDP.
-
-For the actual server use the same code as shown above. For the "client"-servers use the following code example:
+RemoveEventDDP allows to send events between two servers. One server act as actual server as shown above while any other server is using RemoveEventDDP to connect to it. Any connecting server is basically a "client".
 
 ```js
   var ddpEvents = new RemoteEventDDP('raix:push', 'http://url-to-meteor-application');
 
   // Add listener
-
   ddpEvents.addListener('message', function(message) {
     console.log(message);
   });
