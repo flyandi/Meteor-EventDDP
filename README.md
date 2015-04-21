@@ -1,9 +1,9 @@
 raix:eventddp
 ==============
 
-This package adds events over ddp, so you can emit and listen to events from client and server.
+This package adds events over ddp, so you can emit and listen to events from client to server and server to server.
 
-
+On the client:
 ```js
   var ddpEvents = new EventDDP('raix:push', Meteor.connection);
 
@@ -44,6 +44,28 @@ On the server:
         // check client.foo
     }
   });
+```
+
+### Server to Server Connection
+
+RemoveEventDDP allows to establish EventDDP between two servers. One server needs to be defined as the actual server while the other servers can connect to it via RemoveEventDDP.
+
+For the actual server use the same code as shown above. For the "client"-servers use the following code example:
+
+```js
+  var ddpEvents = new RemoteEventDDP('raix:push', 'http://url-to-meteor-application');
+
+  // Add listener
+
+  ddpEvents.addListener('message', function(message) {
+    console.log(message);
+  });
+```
+
+On the actual server:
+
+```js
+ ddpEvents.emit("message", "Hi!");
 ```
 
 
