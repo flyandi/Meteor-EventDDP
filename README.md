@@ -5,6 +5,13 @@ This package is based on raix:eventddp and extends it to allow the server to act
 
 This package adds events over ddp, so you can emit and listen to events from client to server and server to server.
 
+### Installation
+
+Install this package via ```meteor add flyandi:eventddp```
+
+
+### Usage
+
 On the client:
 ```js
   var ddpEvents = new EventDDP('raix:push', Meteor.connection);
