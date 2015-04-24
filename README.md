@@ -1,5 +1,7 @@
-raix:eventddp
+flyandi:eventddp
 ==============
+
+This package is based on raix:eventddp and extends it to allow the server to act as a client for server to server communication.
 
 This package adds events over ddp, so you can emit and listen to events from client to server and server to server.
 
@@ -129,9 +131,3 @@ Example of how the matcher works, you might find it useful in other projects:
   match.documentMatches({ a: 1 }); // { result: false }
   match.documentMatches({ a: 6 }); // { result: true }
 ```
-
-### TODO:
-* [ ] Write the full api
-* [ ] Write complete test coverage
-
-Kind regards Morten

@@ -1,8 +1,8 @@
 Package.describe({
-  name: "raix:eventddp",
+  name: "flyandi:eventddp",
   version: '0.0.3',
   summary: "A server and client event package, events via ddp.",
-  git: "https://github.com/raix/Meteor-EventDDP.git"
+  git: "https://github.com/flyandi/Meteor-EventDDP.git"
 });
 
 Package.onUse(function (api) {
@@ -27,7 +27,7 @@ Package.onUse(function (api) {
 
 
 Package.onTest(function (api) {
-  api.use(['raix:eventddp']);
+  api.use(['flyandi:eventddp']);
   api.use('test-helpers', ['server', 'client']);
   api.use('tinytest');
 
