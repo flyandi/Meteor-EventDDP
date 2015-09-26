@@ -1,6 +1,6 @@
 Package.describe({
   name: "flyandi:eventddp",
-  version: '0.0.3',
+  version: '0.0.4',
   summary: "A server and client event package, events via ddp.",
   git: "https://github.com/flyandi/Meteor-EventDDP.git"
 });
